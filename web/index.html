@@ -5,192 +5,195 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Portfolio Website</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
   <div id="header">
     <div class="container">
-      <nav>
-        <img src="images/logo.webp" class="logo">
-        <ul id="sidemenu">
-          <li><a href="#header">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <img onclick="closemenu()" class="i" width="64" height="64"
-            src="https://img.icons8.com/sf-black-filled/64/x.png" alt="x" />
-        </ul>
-        <img onclick="openmenu()" class="i" width="50" height="50" src="https://img.icons8.com/ios/50/menu--v1.png"
-          alt="menu--v1" />
-      </nav>
+<nav class="navbar navbar-expand-lg bg-body-tertiary d-flex flex-wrap justify-content-between">
+    <a class="navbar-brand" href="#"><img src="images/web-developer-high-resolution-logo-transparent.png" class="logo" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#sect">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+</nav>
+    </div></div>
+  <!-- -------------------------------section1------------------------------ -->
+   <div id="sect" class="section1">
+    <div class="container">
       <div class="header-txt">
         <p>Software Engineering</p>
-        <h1>Hi,<br> I'm <span> Shreen Samhi </span> <br> from Egypt</h1>
+        <h1> <span> Shreen Samhi </span> </h1>
       </div>
-
     </div>
-  </div>
-
-  <!-- -------------------------------about------------------------------ -->
+   </div>
+     <!-- -------------------------------about------------------------------ -->
   <div id="about">
     <div class="container">
-      <div class="row">
-        <div class="about-col-1">
-          <img src="images/user.webp">
+      <div class="row ms-5">
+        <div class="col-3 position-relative">
+          <img src="images/team3.png" class="imgs position-absolute w-50 h-100">
         </div>
-        <div class="about-col-2">
-          <h1 class="sub-title">About Me</h1>
-          <p>In my final year at the Faculty of Computers,
-            Information and Artificial Intelligence, Cairo University,
-            my major is computer science. I studied a lot and took courses from Coursera on the web, especially Front
-            End.
+        <div class="col-8 ">
+          <h1 class="mb-3">About Me</h1>
+          <p class="mb-5 animate__animated animate__backInRight animate__delay-4s">I graduated from Faculty of Computers Science and Artificial Intelligence , Cairo University,
+            my major is computer science . I studied a lot and took courses from Coursera on the web, especially Front
+            End . Finally i take training in ITI in .NET and NTI in Web Design .
           </p>
-
-          <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
-          </div>
-          <div class="tab-contents active-tab" id="skills">
-            <ul>
-              <li><span>Programming Lsnguages</span><br>C++ , Java , JavaScripts , React Js</li>
-              <li><span>Version Control System</span><br>Git , GitHub</li>
-              <li><span>Personal Skills</span><br>Problem solving , Teamwork , Work under pressure</li>
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active text-white fs-4" id="pills-skill-tab" data-bs-toggle="pill" data-bs-target="#pills-skill" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Skills</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link text-white fs-4" id="pills-education-tab" data-bs-toggle="pill" data-bs-target="#pills-education" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Education</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link text-white fs-4" id="pills-services-tab" data-bs-toggle="pill" data-bs-target="#pills-services" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Services</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-skill" role="tabpanel" aria-labelledby="pills-skill-tab" tabindex="0"> 
+              <ul>
+              <li class="mb-2"><h4> Programming Lsnguages</h4>
+                <p class="animate__animated animate__backInRight animate__delay-5s">C++ , Java , JavaScripts , React Js</p>
+              </li>
+              <li class="mb-2"><h4>Version Control System</h4>
+                <p class="animate__animated animate__backInRight animate__delay-5s">Git , GitHub</p>
+              </li>
+              <li class="mb-2"><h4>Personal Skills</h4>
+                <p class="animate__animated animate__backInRight animate__delay-5s">Problem solving , Teamwork , Work under pressure</p>
+              </li>
             </ul>
           </div>
-          <div class="tab-contents" id="education">
-            <ul>
-              <li><span>2020 - Current</span><br>Computer Science at Cairo University</li>
-              <li><span>2023</span><br>Certificates from Coursera in Front-End</Front-End></li>
-            </ul>
-          </div>
+            <div class="tab-pane fade" id="pills-education" role="tabpanel" aria-labelledby="pills-education-tab" tabindex="0">
+              <ul>
+                <li class="mb-2"><h4>2020 - 2024</h4>
+                  <p class="animate__animated animate__backInRight animate__delay-1s">Computer Science at Cairo University </p>
+                  </li>
+                <li class="mb-2"><h4>2023</h4>
+                <p class="animate__animated animate__backInRight animate__delay-2s">  Certificates from Coursera in Front-End</p>
+                </li>
+                <li class="mb-2"><h4>2024</h4>
+                  <p class="animate__animated animate__backInRight animate__delay-3s">Certificates from ITI in Back-End .NET</p>
+                </li>
+                <li class="mb-2"><h4>2024</h4>
+                  <p class="animate__animated animate__backInRight animate__delay-4s">Certificates from NTI in Front-End</p>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="pills-services" role="tabpanel" aria-labelledby="pills-services-tab" tabindex="0">
+              <ul>
+                <li class="mb-2"><h4>Junior_Front_End </h4>
+                  <p class="animate__animated animate__backInRight animate__delay-1s">As a Junior Front-End Developer, 
+                    I have foundational skills in HTML, CSS, Bootstrap, and basic JavaScript,
+                     which allow me to build and style responsive, user-friendly websites. 
+                     I can create well-structured web pages, design layouts with Bootstrap for responsive design,
+                      and add interactivity using JavaScript. My focus is on bringing creative and functional design elements to life, 
+                      ensuring a smooth and engaging user experience. </p>
+                  </li>
+                <li class="mb-2"><h4>Junior_Back_End_.NET</h4>
+                <p class="animate__animated animate__backInRight animate__delay-2s"> As a Junior Back-End Developer specializing in .NET, 
+                  I have a solid foundation in C#, MVC, and SQL. I am skilled in building server-side logic,
+                   managing databases, and developing structured applications using the MVC pattern. With my SQL knowledge,
+                    I can handle data interactions and ensure that backend processes are efficient and reliable.
+                   My focus is on creating maintainable and organized code that supports the overall functionality of web applications.</p>
+                </li>
+              </ul>
+            </div>
+           </div>
         </div>
       </div>
     </div>
 
   </div>
-
-
   <!-- --------------------------------------projects-------------------------------- -->
-
   <div id="projects">
     <div class="container">
       <h1 class="sub-title">Projects</h1>
       <div class="work-list">
         <div class="work">
-          <img src="images/calc.jpg">
+          <img src="images/calculator-image-in-flat-style-vector-3272026.jpg" class="imgheight">
           <div class="layer">
-            <h3>Calculater App</h3>
-            <p>This app made with React </p>
-            <a href="https://github.com/shreensamhi/calc"><img width="32" height="32"
-                src="https://img.icons8.com/small/32/000000/external-link.png" alt="external-link" /></a>
+            <h3>Shopping Cart Website</h3>
+            <p>This website is basic Shopping Cart i made it as project in training ITI as Back-End_.NET </p>
+            <a href="https://github.com/shreensamhi/Shopping_Web_.Net"><i class="fa-solid fa-link"></i></a>
           </div>
         </div>
         <div class="work">
-          <img src="images/connect.png">
+          <img src="images/connect.png" class="imgheight">
           <div class="layer">
             <h3>Connect 4 App</h3>
             <p>This game app made with Python </p>
-            <a href="https://github.com/shreensamhi/AI-Game"><img width="32" height="32"
-                src="https://img.icons8.com/small/32/000000/external-link.png" alt="external-link" /></a>
+            <a href="https://github.com/shreensamhi/AI-Game"><i class="fa-solid fa-link"></i></a>
           </div>
         </div>
         <div class="work">
-          <img src="images/wedding1.png">
+          <img src="images/wedding1.png" class="imgheight">
           <div class="layer">
             <h3>Wedding Planner Website</h3>
             <p>This Website made to help others in their wedding </p>
-            <a href="https://github.com/shreensamhi/Website_Wedding_Planner"><img width="32" height="32"
-                src="https://img.icons8.com/small/32/000000/external-link.png" alt="external-link" /></a>
+            <a href="https://github.com/shreensamhi/Website_Wedding_Planner"><i class="fa-solid fa-link"></i></a>
           </div>
         </div>
       </div>
-      <a href="https://github.com/shreensamhi" class="btn">See More</a>
+      <a href="https://github.com/shreensamhi">  <button class="btn ">See More</button></a>
     </div>
   </div>
 
   <!-- ----------------------contact------------------------------------ -->
-  <div id="contact"></div>
+<div id="contact">
   <div class="container">
+    <form id="form">
     <div class="row">
-      <div class="contact-left">
-        <h1 class="sub-title">Contact Me</h1>
-        <p><img width="25" height="25" src="https://img.icons8.com/color/48/sent--v2.png"
-            alt="sent--v2" />shreensamhi01@gmail.com</p>
-        <p><img width="25" height="25" src="https://img.icons8.com/color/48/000000/phone.png" alt="phone" />01558594441
-        </p>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/profile.php?id=100009621819795"><img width="48" height="48"
-              src="https://img.icons8.com/fluency/48/facebook-new.png" alt="facebook-new" /></a>
-          <a
-            href="https://www.instagram.com/shreensamhi/?fbclid=IwAR25RewZYmdzzFC98i06B3xIB7SOg4aSX_G0dt5dNg2dR8uiHILSwA1su4Y"><img
-              width="48" height="48" src="https://img.icons8.com/color/48/instagram-new--v1.png"
-              alt="instagram-new--v1" /></a>
-          <a
-            href="https://www.linkedin.com/in/shreen-samhi-378b73221/?fbclid=IwAR3OLg86CQNblMFEhfNimL3Hv52JjLehaKT7Vcdav4pIPQ5XJuFYfCBvJdg"><img
-              width="48" height="48" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin" /></a>
-        </div>
-        <a href="images/Shreen_CV.pdf" download class="btn btn2">Download CV</a>
+      <div class="col-6">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
       </div>
-      <div class="contact-right">
-        <form name="submit-to-google-sheet">
-          <input type="text" name="Name" placeholder="Your Name" required>
-          <input type="email" name="Email" placeholder="Your Email" required>
-          <textarea name="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
-          <button type="submit" class="btn btn2">Sumbit</button>
-        </form>
-        <span id="msg"></span>
+      <div class="col-6">
+        <textarea name="Message" placeholder="Your Message"></textarea>
       </div>
     </div>
-    <div class="end">
-      <p>My Portofolio<img width="48" height="48" src="https://img.icons8.com/fluency/48/like.png" alt="like" /></p>
-    </div>
-
-
+    <button type="submit" class="btn">Sumbit</button>
+  </form>
   </div>
+</div>
+  <!-- ----------------------footer------------------------------------ -->
 
-  <script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+<div class="footer text-center">
+  <div class="container py-3">
+  <a href="https://www.facebook.com/profile.php?id=61555968733820&mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f fs-2 mx-5"></i></a>
+  <a href="https://github.com/shreensamhi"><i class="fa-brands fa-github fs-2 mx-5"></i></a>
+  <a href="https://www.linkedin.com/in/shreen-samhi-378b73221?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin fs-2 mx-5"></i></a>
+  </div>
+</div>
 
-    function opentab(tabname) {
-      for (tablink of tablinks) {
-        tablink.classList.remove("active-link");
-      }
-      for (tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-      }
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
-    }
 
-    var sidemenu = document.getElementById("sidemenu");
 
-    function openmenu() {
-      sidemenu.style.right = "0";
-    }
-    function closemenu() {
-      sidemenu.style.right = "-200px";
-    }
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwUD6jzs_lMuxGIhdzFwyFSyHZqsbWWTse0WLuJvv8T99AQUDuAjR0ikdv6Fjkf1dc_fw/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-          msg.innerHTML = "Message sent successfully"
-          setTimeout(function () {
-            msg.innerHTML = ""
-          }, 5000)
-          form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-
-  </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/java.js"></script>
 
 </body>
 

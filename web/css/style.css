@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080808;
+  color: #fff;
+}
+.bg-body-tertiary {
+  background-color: transparent !important;
+}
+#header{
+  background-color: #351e5a;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+ul{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.section1 {
+  width: 100%;
+  height: 120vh;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  width: 140px;
+}
+#pills-tabContent ul{
+    list-style: none;
+}
+#pills-tabContent ul h4 {
+  color: #d54c83;
+  margin-bottom: 2%;
+  position: relative;
+  display: inline-block;
+}
+#pills-tabContent ul h4::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+#pills-tabContent ul h4:hover::after {
+  width: 100%;
+}
+ nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px !important;
+}
+
+nav ul li a {
+  color:  #d54c83 !important;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+} 
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: var(--bs-nav-pills-link-active-color);
+   background-color: transparent; 
+  border-bottom: #ff004f;
+  border-style: solid;
+  border-radius: 0;
+}
+.header-txt {
+  margin-top: 20%;
+  font-size: 30px;
+  float: right;
+  margin-right: 15%;
+}
+
+.header-txt h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.header-txt h1 span {
+  color: #d54c83;
+}
+
+/* ----------------------------about-------- */
+
+
+#about {
+  padding: 80px 0;
+  color: #ababab;
+}
+
+
+
+
+.imgs {
+  filter: drop-shadow(-16px 0 5px rgba(140, 140, 140, 0.4));
+
+}
+
+
+
+/* ----------------------------projects------------------------- */
+
+#projects {
+  padding: 50px 0;
+  background-color: #262626;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.imgheight{
+  width: 601px;
+  height: 601px;
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #d54c83);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.layer a {
+  margin-top: 10px;
+  color: white;
+  font-size: 50px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #d54c83;
+  padding: 14px 50px;
+  border-radius: 6px;
+  color: #fff;
+  transition:  0.5s;
+  position: relative;
+  overflow: hidden; 
+}
+.btn::after{
+  content: '';
+  width: 50px;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.296);
+  rotate: 30deg;
+  position:absolute;
+  top: -55px;
+  left: -67px;
+  opacity: 1;
+  z-index: 0;
+  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.btn:hover {
+  background: #d54c83;
+}
+.btn:hover::after{
+  left: 112%;
+}
+
+/* ------------------------contact---------------------------------------- */
+
+form input, form textarea{
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+textarea {
+  height: 146px;
+  display: block;
+  resize: none;
+  font-family: sans-serif;
+}
+
+.footer{
+  background-color: #262626;
+}
