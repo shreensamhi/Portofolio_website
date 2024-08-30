@@ -14,3 +14,20 @@ form.addEventListener('submit', e => {
     .catch(error => console.error('Error!', error.message))
 })
 
+
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    items : 2,
+    }
+  );
+});
+
+const icon = document.getElementById('arrow-icon');
+
+  window.addEventListener('scroll', function() {
+        if (window.scrollY > 200) { 
+            icon.style.display = 'block';
+        } else {
+            icon.style.display = 'none';
+        }
+    });
